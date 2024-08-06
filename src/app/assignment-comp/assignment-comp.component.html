@@ -1,0 +1,25 @@
+
+<div>
+<table border="2" align="center" [cellPadding]="7" [width]="500">
+<tr>
+    <th>UID</th>
+    <th>Email</th>
+    <th>Password</th>
+</tr>
+
+<tr *ngFor="let i of user">
+    <td>{{i.uid}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.password}}</td>
+</tr>
+</table>
+</div>
+
+<br><hr>
+
+<h2>Person-Information</h2>
+<ul *ngFor="let i of person">
+   <li>{{i.pid}} {{i.pname}} {{i.country}}</li>
+</ul>
+
+

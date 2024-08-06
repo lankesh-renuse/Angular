@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+h2
+{
+    color: rgb(17, 18, 18);
+    text-indent: 100px;
+    background-color: rgb(156, 221, 221);
+}
+
+h1
+{
+color: crimson;
+background-color: blue;
+
+}
+
+@import "~node_modules/bootstrap/dist/css/bootstrap.css"

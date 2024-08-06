@@ -1,0 +1,76 @@
+
+<h2>data binding</h2>
+<div class="container">
+    <h3 [innerHTML]="txt" class="text-primary"></h3>
+    <input type="text" [value]="msg">
+    <img [src]="imagepath"  height="200px" width="200px">
+</div>
+    <br><hr>
+
+    <h2>ngModel</h2>
+
+    enter your name = <input type="text" [(ngModel)]="greeting">
+    <p>welcome , {{greeting}}</p>
+
+    <br><br> <hr>
+
+
+    <h2>calculatar using ng ngModel</h2>
+
+    <input type="number" [(ngModel)]="num1">
+    <input type="number" [(ngModel)]="num2">
+    <h4>Addition :- {{num1+num2}}</h4>
+    <br><br><br><br><hr><br>
+
+    <h2>event handling</h2>
+    
+    <br>
+
+    <button (mouseover)="sayHello()">click me </button>
+    <p>welcome , {{name}}</p>
+    <br><br><hr>
+
+    <div class="container">
+
+    <!-- <button class="btn btn-primary m-2 ">click me </button>
+    <button class="btn btn-warning m-2">click me </button> -->
+
+    <input type="text" #tet><br>
+    <button class="btn btn-outline-success m-2" (click)="fun1(tet.value)">
+        click me </button>
+        <p>value of textbox :- {{globalval}}</p>
+</div>
+
+<br><br><hr>
+
+<h2>addition</h2>
+
+ Enter no1 :- <input type="number" #no1 ><br><br>
+ Enter no2 :- <input type="number" #no2 ><br><br>
+ <button class="btn btn-outline-success" (click)="add(no1.value , no2.value)">
+     Addition</button>
+     <h4>Addition :- {{sum}}</h4>
+<br><br><hr>
+
+<h2>key event</h2>
+
+<input type="text" (keydup)="KeyEvent($event)">
+<p> Text :-{{massage}}</p>
+<br><br><hr>
+
+
+<h3> select country </h3>
+<select (change)="setdropdwonvalue($event)">
+    <option value="">select</option>
+    <option value="uk">uk</option>
+    <option value="ind">ind</option>
+    <option value="uae">uae</option>
+</select><br><br>
+
+<h3 class="text-warning"> you have selected</h3><br>
+<div [ngSwitch]='dropdwonvalue'>
+    <h4 *ngSwitchCase="'uk'">united kingdom</h4>
+    <h4 *ngSwitchCase="'ind'">india</h4>
+    <h4 *ngSwitchCase="'uae'">united areb enation</h4>
+    <h4 *ngSwitchDefault=""> you have not select any</h4>
+</div>

@@ -1,0 +1,47 @@
+<div class="container"><br><br>
+    <h3 class="text-info  text-center"> pipe Examples</h3>   
+    <hr>
+
+    <h3>UpperCase pipe  :- {{title | uppercase}}</h3>
+    <h3>lowerCase pipe  :- {{title | lowercase}}</h3>
+    <h3> today's date  :- {{todaydate | date}}</h3>
+    <h3> today's date  :- {{todaydate | date:'d/m/y' }}</h3>
+    <h3> json pipe :- {{jsonval  | json}}</h3>
+    <h3> currency pipe :- {{13244 | currency:"INR"}}</h3>
+    <h3> currency pipe :- {{13244 | currency:"USD"}}</h3>
+    <h3>slice pipe :- {{months | slice:2:6}}</h3>
+    <br> <br> <hr>
+
+
+    <h2 class="text-center text-secondary">custom pipe Examples</h2>
+    <br>
+
+    <h3>  to find power :- {{4  | power:3}}</h3>
+<br><br><hr>
+
+    <h2 class="text-center text-secondary">custom gender pipe </h2>
+<br><br>
+
+<table class="table table-bordered m-3 p-4 text-center 
+w-75 bg-info text-white display-7" style="font-weight: bold;">
+
+<tr>
+    <th>Employee Name</th>
+    <th>Country</th>
+    <th>Gender</th>
+    <th>Salary</th>
+</tr>
+<tr *ngFor="let i of emp">
+    <td>{{i.ename | gen:i.gender}}</td>
+    <td>{{i.country}}</td>
+    <td>{{i.gender}}</td>
+    <td>{{i.sal}}</td>
+    
+
+</tr>
+
+</table>
+
+
+
+</div>

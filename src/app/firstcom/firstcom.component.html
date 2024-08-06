@@ -1,0 +1,19 @@
+<p> this is user defiend firstcom works!</p>
+
+<table border="2" align="center" cellPadding="8" width="500px">
+    <tr>
+        <th>Emp Name</th>
+        <th>Salary</th>
+        <th>Country</th>
+        <th>DeptNo</th>
+        <th>Role</th>
+    </tr>
+
+    <tr *ngFor="let i of Employees">
+        <td>{{i.name}}</td>
+        <td>{{i.sal}}</td>
+        <td>{{i.country}}</td>
+        <td>{{i.deptno}}</td>
+        <td>{{i.role}}</td>
+    </tr>
+</table>
